@@ -25,6 +25,11 @@ Some functions have a link to the related documentation from GitLab. For example
 const getProjects = async (filter = {}) => {};
 ```
 
+1. Run `npm install` in your terminal
+2. Add your personal access token to the `.env` file (see instructions above)
+3. Modify the main script in `index.js` (see examples below)
+4. Run `node index.js`
+
 ## Examples
 
 You can paste these examples right in your `index.js` file.
