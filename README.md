@@ -44,7 +44,6 @@ const updateFiles = async () => {
   });
 
   projects.forEach(async (project) => {
-    console.log(project.name);
     const files = await getProjectFiles(project);
 
     files.forEach(async (file) => {
