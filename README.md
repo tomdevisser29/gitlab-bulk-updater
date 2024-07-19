@@ -79,7 +79,7 @@ const checkFilesForString = async () => {
     const files = await getProjectFiles(project, "php");
 
     for (const file of files) {
-      const string = "polyfill";
+      const string = "";
       const containsString = await checkIfFileContainsString(
         string,
         file,
