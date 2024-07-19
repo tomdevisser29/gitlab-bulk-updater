@@ -11,6 +11,8 @@ const getProjects = async (filter = {}) => {
   let currentPage = 1;
   let totalPages = 0;
 
+  logInfo(`Started fetching projects from GitLab`);
+
   do {
     try {
       const response = await axios.get(`${baseUrl}projects`, {
@@ -23,15 +25,13 @@ const getProjects = async (filter = {}) => {
       allProjects = allProjects.concat(response.data);
       totalPages = parseInt(response.headers["x-total-pages"], 10);
       currentPage++;
-
-      logSuccess(`- Fetched page ${currentPage - 1} from GitLab`);
     } catch (error) {
       logError(error.message);
       break; // Exit loop on error
     }
   } while (currentPage <= totalPages);
 
-  logSuccess(`- Fetched ${allProjects.length} projects from GitLab`);
+  logSuccess(`Fetched ${allProjects.length} projects from GitLab`);
   return allProjects;
 };
 
