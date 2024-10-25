@@ -1,4 +1,4 @@
-# gitlab-bulk-updater
+# GitLab Bulk Updater
 
 ## Instructions
 
